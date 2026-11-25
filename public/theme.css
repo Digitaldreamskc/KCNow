@@ -1,0 +1,40 @@
+/* Replace these values and the header mark when the KC Now brand kit is approved. */
+:root {
+  --font-body: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --page: #faf9f6;
+  --surface: #fff;
+  --band: #f0eee9;
+  --text: #202020;
+  --muted: #53504c;
+  --border: #dedad2;
+  --primary: #302e2c;
+  --primary-hover: #171615;
+  --on-primary: #fff;
+  --dark: #262524;
+  --on-dark: #fffdf9;
+  --muted-on-dark: #e6e0d8;
+  --accent: #e4d7c4;
+  --focus: #6e5942;
+  --educate: #eee9e1;
+  --connect: #ebebea;
+  --activate: #ece4d8;
+  --overlay: #1f1d1b9c;
+  --shadow: #211e1a40;
+  --menu-shadow: #211e1a10;
+  --brand-logo: none;
+  --brand-symbol-opacity: 1;
+  --radius-small: 8px;
+  --radius-card: 16px;
+  --radius-large: 26px;
+  --space-section: clamp(3.3rem, 6vw, 5rem);
+  --content-width: 1248px;
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("assets/inter.woff2") format("woff2");
+}

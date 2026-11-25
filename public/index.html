@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore civic news, local initiatives, and ways to serve across the Kansas City region.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>KC Now · Community Hub</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="hub.css">
+  <script defer src="content.js"></script>
+  <script defer src="hub.js"></script>
+  <script defer src="county-map.js"></script>
+  <script defer src="meetings.js"></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="KC Now home">
+        <span class="brand-mark" aria-hidden="true"><i data-icon="compass"></i></span>
+        <span>KC Now<small>Community Hub</small></span>
+      </a>
+      <nav aria-label="Main navigation" class="main-nav" id="navigation">
+        <a href="#counties">Counties</a><a href="#brief">Civic Brief</a><a href="#learn">Learn</a><a href="#opportunities">Opportunities</a>
+        <a href="#initiatives">Initiatives</a><a href="#community">Community</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-dialog="search" aria-label="Search the hub"><i data-icon="search"></i></button>
+        <button class="icon-button" type="button" data-dialog="saved" aria-label="Saved items"><i data-icon="bookmark"></i><span id="saved-count" class="count" hidden></span></button>
+        <a class="button primary header-cta" href="#opportunities">Get involved</a>
+        <button class="icon-button menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="navigation"><i data-icon="menu"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap hero-wrap" aria-labelledby="hero-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow hero-kicker"><span></span> Kansas City civic life</p>
+          <h1 id="hero-title">Find your place in Kansas&nbsp;City’s civic life.</h1>
+          <p class="hero-description">Get informed, meet people doing the work, and find a way to serve across the Kansas City region.</p>
+          <div class="actions">
+            <a class="button light" href="#opportunities">Find a way to serve</a>
+            <a class="button ghost" href="#brief">Read the Civic Brief</a>
+          </div>
+        </div>
+        <aside class="hero-resources" aria-labelledby="start-title">
+          <h2 id="start-title">Start with a civic resource</h2>
+          <div class="hero-resource-list">
+            <button class="hero-resource" type="button" data-detail="public-meetings">
+              <span class="icon-tile"><i data-icon="calendar"></i></span>
+              <span><strong>Find a public meeting</strong><small>Official calendars on both sides of the state line</small></span>
+            </button>
+            <button class="hero-resource" type="button" data-detail="board-readiness">
+              <span class="icon-tile"><i data-icon="book-open"></i></span>
+              <span><strong>Prepare for board service</strong><small>Questions to ask and where to find openings</small></span>
+            </button>
+            <button class="hero-resource" type="button" data-dialog="connect">
+              <span class="icon-tile"><i data-icon="users"></i></span>
+              <span><strong>Get a suggested next step</strong><small>Start with your interests and goals</small></span>
+            </button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="wrap section pathways" aria-labelledby="pathways-title">
+      <div class="section-head"><h2 id="pathways-title">How do you want to get involved?</h2><p>Three ways into Kansas City’s civic community.</p></div>
+      <div class="grid three">
+        <a href="#learn" class="path-card">
+          <span class="icon-tile educate"><i data-icon="book-open"></i></span>
+          <div><h3>Educate</h3><p>Learn how local decisions are made and what civic leadership takes.</p></div>
+        </a>
+        <a href="#community" class="path-card">
+          <span class="icon-tile connect"><i data-icon="users"></i></span>
+          <div><h3>Connect</h3><p>Find organizations, leadership programs, and places to meet people.</p></div>
+        </a>
+        <a href="#opportunities" class="path-card">
+          <span class="icon-tile activate"><i data-icon="hand-helping"></i></span>
+          <div><h3>Activate</h3><p>Explore board service, public office, and paid civic roles.</p></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="wrap section county-section" id="counties" aria-labelledby="counties-title">
+      <div class="section-head">
+        <h2 id="counties-title">Explore by county</h2>
+        <p>Select a county to find local government and nonprofit resources across the Kansas City region.</p>
+      </div>
+      <div class="county-layout">
+        <div class="county-picker">
+          <figure class="county-figure">
+            <div class="county-map-stage">
+              <svg id="county-map" viewBox="27 -6 450 432" role="group" aria-label="Kansas City area county map"></svg>
+              <div id="county-map-labels" aria-hidden="true"></div>
+            </div>
+            <figcaption class="county-legend">
+              <span class="county-ks">Kansas</span>
+              <span class="county-mo">Missouri</span>
+            </figcaption>
+          </figure>
+          <label class="county-choice" for="county-choice">County
+            <select id="county-choice" aria-controls="county-resources"></select>
+          </label>
+        </div>
+        <section class="county-resources" id="county-resources" aria-labelledby="county-name">
+          <p class="eyebrow" id="county-state"></p>
+          <h3 id="county-name"></h3>
+          <div class="county-resource">
+            <h4>Civic resources</h4>
+            <div id="county-civic"></div>
+          </div>
+          <div class="county-resource">
+            <h4>Nonprofits and volunteering</h4>
+            <div id="county-nonprofit"></div>
+          </div>
+          <div class="county-resource">
+            <a class="text-link" href="https://unitedwaygkc.org/community-partners-directory/">Regional nonprofit directory</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section band" id="brief" aria-labelledby="brief-title">
+      <div class="wrap">
+        <div class="section-head row">
+          <div><p class="eyebrow">What’s happening</p><h2 id="brief-title">The Civic Brief</h2><p>Local issues, the people working on them, and ways to take part.</p></div>
+          <a class="text-link" href="#meetings">See upcoming meetings</a>
+        </div>
+        <div id="brief-filters" class="filters" role="group" aria-label="Filter the Civic Brief"></div>
+        <div class="grid three" id="brief-list"></div>
+        <section class="meetings" id="meetings" aria-labelledby="meetings-title">
+          <div class="meetings-head">
+            <div>
+              <h3 id="meetings-title">Upcoming Kansas City meetings</h3>
+              <p>Kansas City, Missouri · Central time</p>
+            </div>
+            <a class="text-link" href="https://clerk.kcmo.gov/Calendar.aspx">City Clerk calendar</a>
+          </div>
+          <ul class="meeting-list" id="meeting-list" aria-label="Upcoming meetings" hidden></ul>
+          <div class="meetings-footer">
+            <p id="meeting-status" role="status">Loading meetings from the City Clerk’s Legistar feed…</p>
+            <button class="button secondary" id="meeting-refresh" type="button" aria-controls="meeting-list" hidden>Refresh meetings</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="wrap section" id="learn" aria-labelledby="learn-title">
+      <div class="section-head"><p class="eyebrow">Educate</p><h2 id="learn-title">Civic Learning Center</h2><p>Practical guides to local government, public participation, and nonprofit leadership.</p></div>
+      <div class="grid three" id="learn-list"></div>
+    </section>
+
+    <section class="section band" id="opportunities" aria-labelledby="opportunities-title">
+      <div class="wrap">
+        <div class="section-head row">
+          <div><p class="eyebrow">Activate</p><h2 id="opportunities-title">Find your way to serve</h2><p>Start with the role that interests you. Apply through the organization or agency offering it.</p></div>
+          <button class="button secondary" type="button" data-dialog="connect">Help me get started</button>
+        </div>
+        <div id="opportunity-filters" class="filters" role="group" aria-label="Filter opportunities"></div>
+        <div class="grid two" id="opportunity-list"></div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="initiatives" aria-labelledby="initiatives-title">
+      <div class="section-head"><p class="eyebrow">Regional priorities</p><h2 id="initiatives-title">Follow the issues you care about</h2><p>Explore regional work already underway and find ways to participate.</p></div>
+      <div class="grid three" id="initiatives-list"></div>
+    </section>
+
+    <section class="section band" id="community" aria-labelledby="community-title">
+      <div class="wrap">
+        <div class="section-head row">
+          <div><p class="eyebrow">Connect</p><h2 id="community-title">Explore the civic community</h2><p>Find local organizations that educate, connect, and help people serve.</p></div>
+          <button class="button secondary" type="button" data-dialog="connect">Find a next step</button>
+        </div>
+        <div id="directory-filters" class="filters" role="group" aria-label="Filter organizations"></div>
+        <div class="grid three" id="directory-list"></div>
+        <div class="events" id="events">
+          <div class="section-head"><h3>Find a civic gathering</h3><p>Check the host’s calendar for dates, agendas, and registration.</p></div>
+          <div class="grid two" id="events-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" aria-labelledby="newsletter-title">
+      <div class="newsletter">
+        <div><p class="eyebrow">Monthly briefing</p><h2 id="newsletter-title">Stay connected to Kansas City.</h2><p>See how civic updates, upcoming gatherings, and opportunities can come together in one email.</p></div>
+        <button class="button light" type="button" data-dialog="newsletter">Preview the briefing</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <a class="brand" href="#top" aria-label="KC Now home"><span class="brand-mark" aria-hidden="true"><i data-icon="compass"></i></span><span>KC Now<small>Community Hub</small></span></a>
+        <div><a href="#community">Community directory</a><button class="text-link" type="button" data-dialog="submission">Suggest a resource</button></div>
+      </div>
+      <div class="footer-meta"><span>Community hub preview · Information links open at the source.</span></div>
+    </div>
+  </footer>
+
+  <dialog id="dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <form method="dialog" class="dialog-close"><button class="icon-button" aria-label="Close dialog"><i data-icon="x"></i></button></form>
+      <p class="eyebrow" id="dialog-kicker"></p>
+      <h2 id="dialog-title"></h2>
+      <div id="dialog-body"></div>
+    </div>
+  </dialog>
+  <div id="status" role="status" class="sr-only"></div>
+</body>
+</html>
